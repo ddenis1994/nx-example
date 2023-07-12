@@ -1,30 +1,43 @@
-<div class="flex flex-col">
-  <input placeholder="TaskName" />
-  <input placeholder="description" />
+<div class="flex flex-col gap-1 mb-2">
+  <input
+    placeholder="TaskName "
+    class="text-2xl opacity-95 outline-none max-w-xs"
+  />
+  <input placeholder="description" class="opacity-95 outline-none" />
 </div>
 <nav>
-  <ul class="flex">
-    <li routerLinkActive="active">
-      <a routerLink="process" skipLocationChange="true"> Process </a>
+  <ul class="grid grid-flow-col justify-start text-sm items-center">
+    <li
+      routerLinkActive="active"
+      routerLink="process"
+      skipLocationChange="true"
+      class="flex justify-center items-center"
+    >
+      <a class="block"> Process </a>
     </li>
-    <li routerLinkActive="active" class="flex">
-      <a skipLocationChange="true" routerLink="output"> Output </a>
+    <li
+      routerLinkActive="active"
+      skipLocationChange="true"
+      routerLink="output"
+      class="flex"
+    >
+      <a> Output </a>
     </li>
-    <li routerLinkActive="active">
-      <a
-        routerLink="distribution"
-        skipLocationChange="true"
-        routerLinkActive="active"
-        >distribution</a
-      >
+    <li
+      routerLinkActive="active"
+      routerLink="distribution"
+      skipLocationChange="true"
+      routerLinkActive="active"
+    >
+      <a>distribution</a>
     </li>
-    <li routerLinkActive="active">
-      <a
-        routerLink="scheduling"
-        skipLocationChange="true"
-        routerLinkActive="active"
-        >Scheduling</a
-      >
+    <li
+      routerLinkActive="active"
+      routerLink="scheduling"
+      skipLocationChange="true"
+      routerLinkActive="active"
+    >
+      <a>Scheduling</a>
     </li>
   </ul>
 </nav>
