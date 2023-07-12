@@ -1,1 +1,43 @@
-<p>task-editing works!</p>
+<div class="flex flex-col">
+  <input placeholder="TaskName" />
+  <input placeholder="description" />
+</div>
+<nav>
+  <ul class="flex">
+    <li>
+      <a
+        routerLink="process"
+        skipLocationChange="true"
+        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
+      >
+        Process
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="output"
+        skipLocationChange="true"
+        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
+      >
+        Output
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="distribution"
+        skipLocationChange="true"
+        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
+        >distribution</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="scheduling"
+        skipLocationChange="true"
+        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
+        >Scheduling</a
+      >
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
