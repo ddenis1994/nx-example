@@ -1,0 +1,99 @@
+ul {
+  list-style-type: none;
+  font-size: 0.85em;
+  $triangle-size: 18px;
+  $arrow-angle-size: 8px;
+  border-bottom: 1px solid var(--color-text-lighter);
+
+  li {
+    &:hover {
+      cursor: pointer;
+    }
+    .text-holder {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+      justify-content: center;
+      position: relative;
+
+      .step-index {
+        left: -22px;
+        position: absolute;
+        border: 0.5px solid black;
+        border-radius: 50%;
+        width: 18px;
+        font-size: x-small;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    padding-bottom: 9px;
+
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    height: calc($triangle-size * 2);
+
+    color: var(--color-text-light);
+    position: relative;
+    padding-left: $triangle-size;
+
+    &.active ~ li {
+      z-index: 1;
+    }
+
+    &:not(.active) {
+      z-index: 3;
+    }
+
+    &:not(.active):before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      z-index: 3;
+
+      transition: all 0s ease;
+      border-color: transparent transparent transparent var(--color-white) !important;
+      right: -$arrow-angle-size; /* Adjust based on padding-right */
+      border-top: calc($triangle-size - 0px) solid transparent; /* Adjust triangle size */
+      border-bottom: calc($triangle-size - 0px) solid transparent; /* Adjust triangle size */
+      border-left: $arrow-angle-size solid var(--color-white); /* Adjust triangle size and color */
+    }
+    &:not(.active):after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      z-index: 2;
+      transform: translateX(1px);
+      border-color: transparent transparent transparent
+        var(--color-text-lighter) !important;
+      right: -$arrow-angle-size; /* Adjust based on padding-right */
+      border-top: calc($triangle-size + 0px) solid transparent; /* Adjust triangle size */
+      border-bottom: calc($triangle-size - 0px) solid transparent; /* Adjust triangle size */
+      border-left: $arrow-angle-size solid var(--color-text-lighter); /* Adjust triangle size and color */
+    }
+
+    &.active {
+      .step-index {
+        border-color: var(--color-white) !important;
+      }
+      color: var(--color-white);
+      background-color: var(--color-active);
+      z-index: 2;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 3;
+        top: 0px;
+        transition: all 0s ease;
+        right: -$arrow-angle-size; /* Adjust based on padding-right */
+        border-top: $triangle-size solid transparent !important; /* Adjust triangle size */
+        border-bottom: $triangle-size solid transparent !important; /* Adjust triangle size */
+        border-left: $arrow-angle-size solid var(--color-active) !important;
+      }
+    }
+  }
+}

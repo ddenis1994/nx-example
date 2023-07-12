@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-text: #52576a;
+  --color-text-light: #0d1e42;
+  --color-text-lighter: #acb2c3;
+  --color-active: #5303a8;
+  --color-white: #ffffff;
+  --color-background: #f7f9fb;
+}

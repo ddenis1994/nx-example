@@ -8,11 +8,6 @@ const routes: Routes = [
     component: TaskEditingComponent,
     children: [
       {
-        path: '',
-        loadChildren: () =>
-          import('../process/process.module').then((m) => m.ProcessModule),
-      },
-      {
         path: 'process',
         loadChildren: () =>
           import('../process/process.module').then((m) => m.ProcessModule),

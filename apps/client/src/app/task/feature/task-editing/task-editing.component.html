@@ -4,37 +4,25 @@
 </div>
 <nav>
   <ul class="flex">
-    <li>
-      <a
-        routerLink="process"
-        skipLocationChange="true"
-        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
-      >
-        Process
-      </a>
+    <li routerLinkActive="active">
+      <a routerLink="process" skipLocationChange="true"> Process </a>
     </li>
-    <li>
-      <a
-        routerLink="output"
-        skipLocationChange="true"
-        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
-      >
-        Output
-      </a>
+    <li routerLinkActive="active" class="flex">
+      <a skipLocationChange="true" routerLink="output"> Output </a>
     </li>
-    <li>
+    <li routerLinkActive="active">
       <a
         routerLink="distribution"
         skipLocationChange="true"
-        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
+        routerLinkActive="active"
         >distribution</a
       >
     </li>
-    <li>
+    <li routerLinkActive="active">
       <a
         routerLink="scheduling"
         skipLocationChange="true"
-        class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer"
+        routerLinkActive="active"
         >Scheduling</a
       >
     </li>
