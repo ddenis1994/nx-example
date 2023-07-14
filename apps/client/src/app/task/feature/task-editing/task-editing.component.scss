@@ -1,6 +1,8 @@
 ul {
-  $triangle-size: 14px;
-  $arrow-angle-size: 7px;
+  list-style-type: none;
+  font-size: 0.85em;
+  $triangle-size: 16px;
+  $arrow-angle-size: 8px;
   border-bottom: 1px solid var(--color-text-lighter);
 
   li {
